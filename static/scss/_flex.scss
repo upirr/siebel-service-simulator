@@ -1,0 +1,53 @@
+.hbox {
+  @include display(flex);
+  @include flex-flow(row nowrap);
+}
+
+.vbox {
+  @include display(flex);
+  @include flex-flow(column nowrap);
+}
+
+.flex-start {
+  @include justify-content(flex-start);
+}
+
+.flex-end {
+  @include justify-content(flex-end);
+}
+
+.center, .centered {
+  @include justify-content(center); 
+}
+
+.space-between {
+  @include justify-content(space-between); 
+}
+
+.x-center {
+  @include align-items(center);
+}
+
+.x-stretch {
+  @include align-items(stretch);
+}
+
+.x-flex-end {
+  @include align-items(flex-end);
+}
+
+.align-self-flex-end {
+  @include align-self(flex-end);
+}
+
+.align-self-stretch {
+  @include align-self(stretch);
+}
+
+.flex {
+    flex-grow: 1;
+}
+
+.max-width {
+	width: 100% !important;
+}

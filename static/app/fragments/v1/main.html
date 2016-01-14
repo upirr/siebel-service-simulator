@@ -1,0 +1,124 @@
+<div ng-controller="MainCtrl">
+	<!-- add button -->
+	<button type="button" id="add-request-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add" ng-click="addItem()">
+		<i class="material-icons" role="presentation">add</i>
+		<span class="visuallyhidden">Add</span>
+	</button>
+
+	<div class="max-width vbox x-center centered no-items-container" ng-if="!model.requests || !model.requests.length">
+		<span class="no-items">No requests found, create new <a ng-click="addItem()">entry</a></span>
+	</div>
+
+
+	<div class="tbl-container">
+		<div class="max-width vbox" ng-if="model.requests.length" mdl-upgrade>
+
+			<div class="mdl-textfield mdl-js-textfield search-input">
+				<input class="mdl-textfield__input" type="text" id="searchInput" ng-model="data.searchData">
+				<label class="mdl-textfield__label" for="searchInput">Search...</label>
+			</div>
+
+			<span>Displaying records: {{requests.length || 0}} of {{model.requests.length || 0}}</span>
+			<!-- table -->
+			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp max-width">
+				<thead>
+					<tr>
+						<th class="mdl-data-table__cell--non-numeric">Service</th>
+						<th class="mdl-data-table__cell--non-numeric">Method</th>
+						<th class="mdl-data-table__cell--non-numeric">Status</th>
+						<th class="mdl-data-table__cell--non-numeric">Last Updated</th>
+						<th class="mdl-data-table__cell--non-numeric">Comments</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr ng-repeat="entry in requests" id="{{entry._guid}}" ng-class="{'is-selected': entry == model.selectedRequest}" ng-click="selectItem(entry)">
+						<td class="mdl-data-table__cell--non-numeric" ng-attr-data-badge="{{entry.changed == true ? '!' : ''}}" ng-class="{ 'mdl-badge' : entry.changed }">{{entry.serviceName}}
+							<div class="mdl-tooltip" for="{{entry._guid}}" ng-if="entry.changed" mdl-upgrade>
+								Item not saved
+							</div>
+						</td>
+						<td class="mdl-data-table__cell--non-numeric">{{entry.serviceMethod}}</td>
+						<td class="mdl-data-table__cell--non-numeric">{{entry.status}}</td>
+						<td class="mdl-data-table__cell--non-numeric">{{formatDate(entry.lastUpdated)}}</td>
+						<td class="mdl-data-table__cell--non-numeric">{{entry.comments}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div id="page-controls" class="hbox max-width centered x-center">
+			<button type="button" class="mdl-button mdl-js-button mdl-button--primary margin">
+				FIRST
+			</button>
+			<button type="button" class="mdl-button mdl-js-button mdl-button--primary margin">
+				PREV
+			</button>
+			<button type="button" class="mdl-button mdl-js-button mdl-button--primary margin">
+				NEXT
+			</button>
+			<button type="button" class="mdl-button mdl-js-button mdl-button--primary margin">
+				LAST
+			</button>
+		</div>
+
+		<div class="hbox x-center mdl-control-container">
+			<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent margin" ng-click="saveItem(model.selectedRequest)" ng-disabled="!model.selectedRequest.changed">
+				SAVE
+			</button>
+			<button type="button" class="mdl-button mdl-js-button mdl-button--primary margin" ng-click="rollbackItem(model.selectedRequest)" ng-disabled="!model.selectedRequest.changed">
+				CANCEL
+			</button>
+
+			<button type="button" class="mdl-button mdl-js-button mdl-button--primary margin" ng-click="deleteItem(model.selectedRequest)" ng-disabled="!model.selectedRequest">
+				DELETE
+			</button>
+
+			<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent margin" ng-click="executeItem(model.selectedRequest)" ng-disabled="!model.selectedRequest">
+				EXECUTE
+			</button>
+
+			<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent margin" ng-click="copyItem(model.selectedRequest)" ng-disabled="!model.selectedRequest">
+				COPY
+			</button>
+			
+			<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent margin" ng-click="formatEditorContents()" ng-disabled="!model.selectedRequest">
+				FORMAT
+			</button>
+
+			<div>
+				<label class="mdl-switch  mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+					<input type="checkbox" id="switch-1" class="mdl-switch__input" ng-checked="{{data.autoSaveOnExecute}}" />
+					<span class="mdl-switch__label">Automatically save after execution</span>
+				</label>
+			</div>
+		</div>
+
+		<!-- uri -->
+		<div class="hbox" ng-disabled="!model.selectedRequest">
+			<div class="mdl-control-container">
+				<div class="mdl-textfield mdl-js-textfield wider">
+					<input class="mdl-textfield__input" type="text" id="serviceName" ng-model="model.selectedRequest.serviceName" />
+					<label class="mdl-textfield__label" for="serviceName" ng-show="!model.selectedRequest.serviceName">Service name</label>
+				</div>
+			</div>
+			<div class="mdl-control-container">
+				<div class="mdl-textfield mdl-js-textfield wider">
+					<input class="mdl-textfield__input" type="text" id="serviceMethod" ng-model="model.selectedRequest.serviceMethod" />
+					<label class="mdl-textfield__label" for="serviceMethod" ng-show="!model.selectedRequest.serviceMethod">Method name</label>
+				</div>
+			</div>
+		</div>
+		<div class="mdl-control-container" ng-disabled="!model.selectedRequest">
+			<div class="mdl-textfield mdl-js-textfield more-wider">
+				<input class="mdl-textfield__input" type="text" id="comments" ng-model="model.selectedRequest.comments" />
+				<label class="mdl-textfield__label" for="comments" ng-show="!model.selectedRequest.comments">Comments, tags, etc.</label>
+			</div>
+		</div>
+
+		<div class="hbox x-stretch xml-container" ng-disabled="!model.selectedRequest">
+			<div ui-codemirror="{ onLoad : onLeftEditorLoaded }" ui-codemirror-opts="editorOptions" ng-model="model.selectedRequest.request"></div>
+			<div ui-codemirror="{ onLoad : onRightEditorLoaded }" ui-codemirror-opts="editorOptions" ng-model="model.selectedRequest.response"></div>
+		</div>
+	</div>
+</div>

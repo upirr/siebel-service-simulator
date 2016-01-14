@@ -1,0 +1,43 @@
+<!-- Simple header with scrollable tabs. -->
+<div class="jsrunner mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	<header class="mdl-layout__header">
+		<span class="contact">Contacts: Valeriy Lapchenok (valeriy.lapchenok@gmail.com)</span>
+		<div class="mdl-layout__header-row">
+			<!-- Title -->
+			<div class="vbox">
+				<span class="mdl-layout-title">SIEBEL SERVICE SIMULATOR</span>
+			</div>
+		</div>
+		<!-- Tabs -->
+		<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+			<a href="#scroll-tab-1" class="mdl-layout__tab is-active">Requests</a>
+			<a href="#scroll-tab-2" class="mdl-layout__tab">Connection profiles</a>
+			<a href="#scroll-tab-3" class="mdl-layout__tab">Connections</a>
+		</div>
+	</header>
+	<!--
+		<div class="mdl-layout__drawer">
+			<span class="mdl-layout-title">Title</span>
+		</div>
+-->
+	<main class="mdl-layout__content">
+		<!-- requests -->
+		<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+			<div class="page-content" ng-include="'/app/fragments/v1/main.html'"></div>
+		</section>
+
+		<!-- connection profiles -->
+		<section class="mdl-layout__tab-panel" id="scroll-tab-2">
+			<div class="page-content">
+				<div ng-include="'/app/fragments/v1/settings.html'" ng-controller="SettingsCtrl"></div>
+			</div>
+		</section>
+
+		<!-- connections -->
+		<section class="mdl-layout__tab-panel" id="scroll-tab-3">
+			<div class="page-content">
+				<div ng-include="'/app/fragments/v1/connections.html'" ng-controller="ConnCtrl"></div>
+			</div>
+		</section>
+	</main>
+</div>

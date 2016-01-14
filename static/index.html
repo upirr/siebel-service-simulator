@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1" />
+	<title>app</title>
+
+	<!--<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>-->
+	
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/angular-toasty/dist/angular-toasty.css">
+	<link rel="stylesheet" href="bower_components/codemirror/lib/codemirror.css">
+	<link rel="stylesheet" href="bower_components/codemirror/theme/eclipse.css">
+	<link rel="stylesheet" href="bower_components/animate.css/animate.css">
+	<link rel="stylesheet" href="bower_components/material-design-lite/material.min.css">
+	<link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.css">
+	<link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.css">
+	<!-- endinject -->
+
+	<link rel="stylesheet" href="app/gen/app.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<!-- bower:js -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="bower_components/angular-toasty/dist/angular-toasty.js"></script>
+	<script src="bower_components/codemirror/lib/codemirror.js"></script>
+	<script src="bower_components/codemirror/mode/xml/xml.js"></script>
+	<script src="bower_components/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/lodash/lodash.js"></script>
+	<script src="bower_components/material-design-lite/material.min.js"></script>
+	<script src="bower_components/ng-dialog/js/ngDialog.js"></script>
+	<script src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+	<!-- endinject -->
+
+	<!-- angular:js -->
+	<script src="app/js/app.js"></script>
+	<script src="app/js/controllers/v2/card-ctrl.js"></script>
+	<script src="app/js/services/utils.js"></script>
+	<script src="app/js/services/request-executor.js"></script>
+	<script src="app/js/services/ps-encoder.js"></script>
+	<script src="app/js/services/ps-decoder.js"></script>
+	<script src="app/js/services/model.js"></script>
+	<script src="app/js/services/api.js"></script>
+	<script src="app/js/native/formatting.js"></script>
+	<script src="app/js/directives/upgrade.js"></script>
+	<script src="app/js/directives/ng-load.js"></script>
+	<script src="app/js/controllers/settings-ctrl.js"></script>
+	<script src="app/js/controllers/main-ctrl.js"></script>
+	<script src="app/js/controllers/conn-ctrl.js"></script>
+	<!-- endinject -->
+
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.deep_purple-purple.min.css" />
+</head>
+
+<body ng-app="app">
+    <toasty></toasty>
+	<div class="ui-view"></div>
+</body>
+
+</html>

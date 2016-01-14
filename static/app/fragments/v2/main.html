@@ -1,0 +1,10 @@
+<div class="main">
+
+	<button type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add" ng-click="addItem()">
+		<i class="material-icons" role="presentation">add</i>
+		<span class="visuallyhidden">Add</span>
+	</button>
+
+
+	<div class="max-width cards" ng-controller="CardCtrl" ng-include="'/app/fragments/v2/request-card.html'"></div>
+</div>

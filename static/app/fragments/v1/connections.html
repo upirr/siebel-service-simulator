@@ -1,0 +1,42 @@
+<div class="max-width hbox centered x-center margin">
+	<div class="card-connections mdl-card mdl-shadow--2dp">
+		<div class="mdl-card__title">
+			<h2 class="mdl-card__title-text">Connections</h2>
+		</div>
+		<div class="mdl-card__supporting-text mdl-card--border">
+
+			<!-- table -->
+			<table ng-if="model.connections && model.connections.length" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp max-width">
+				<thead>
+					<tr>
+						<th class="mdl-data-table__cell--non-numeric">Status</th>
+						<th class="mdl-data-table__cell--non-numeric">URI</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr ng-repeat="entry in model.connections" id="{{entry.id}}" ng-class="{'is-selected': entry == model.selectedConnection}" ng-click="selectItem(entry)">
+						<td class="mdl-data-table__cell--non-numeric">{{entry.status}}</td>
+						<td class="mdl-data-table__cell--non-numeric">{{toURI(entry)}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div ng-if="!model.connections.length" class="max-width vbox x-center centered" ng-if="!model.requests || !model.requests.length">
+				<span class="no-items">No active connections</a></span>
+			</div>
+
+		</div>
+		<div class="mdl-card__actions mdl-card--border">
+			<a ng-disabled="!model.selectedConnection" ng-click="reconnect(model.selectedConnection)" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">
+				Reconnect
+			</a>
+			<a ng-disabled="!model.selectedConnection" ng-click="disconnect(model.selectedConnection)" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+				Disconnect
+			</a>
+			<a ng-disabled="!model.selectedConnection" ng-click="checkConnection(model.selectedConnection)" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+				Check Connection
+			</a>
+		</div>
+	</div>
+</div>

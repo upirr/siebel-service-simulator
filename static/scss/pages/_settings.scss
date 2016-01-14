@@ -1,0 +1,8 @@
+.jsrunner-v2 .settings {
+	padding: 2vmin;
+	.cards {
+		@include display(flex);
+		@include justify-content(center);
+		@include flex-flow(column nowrap);
+	}
+}

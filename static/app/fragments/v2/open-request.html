@@ -1,0 +1,35 @@
+<div class="mdl-card mdl-card--wide animated fadeIn mdl-shadow--2dp">
+	<div class="mdl-card__title" style="background-color: {{getColor(model.selectedRequest)}}">
+		<h2 class="mdl-card__title-text">{{model.selectedRequest.serviceName}} / {{model.selectedRequest.serviceMethod}}</h2>
+	</div>
+	<div class="mdl-card__supporting-text">
+		<div class="hbox">
+			<div class="mdl-control-container">
+				<div class="mdl-textfield mdl-js-textfield wider" mdl-upgrade>
+					<input class="mdl-textfield__input" type="text" id="serviceName" ng-model="model.selectedRequest.serviceName" />
+					<label class="mdl-textfield__label" for="serviceName" ng-show="!model.selectedRequest.serviceName">Service name</label>
+				</div>
+			</div>
+			<div class="mdl-control-container">
+				<div class="mdl-textfield mdl-js-textfield wider" mdl-upgrade>
+					<input class="mdl-textfield__input" type="text" id="serviceMethod" ng-model="model.selectedRequest.serviceMethod" />
+					<label class="mdl-textfield__label" for="serviceMethod" ng-show="!model.selectedRequest.serviceMethod">Method name</label>
+				</div>
+			</div>
+		</div>
+		<div class="hbox">
+			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ng-click="executeItem(model.selectedRequest)">Execute</a>
+			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ng-disabled="!model.selectedRequest.changed" ng-click="saveItem(model.selectedRequest)">Save</a>
+			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ng-click="viewItem(model.selectedRequest)">{{viewMode == 'request' ? 'Switch To Response' : 'Switch To Request'}}</a>
+		</div>
+	</div>
+	<div class="mdl-card__actions mdl-card--border">
+		<ui-codemirror ng-if="viewMode=='request'" ui-codemirror-opts="editorOptions" ng-model="model.selectedRequest.request"></ui-codemirror>
+		<ui-codemirror ng-if="viewMode=='response'" ui-codemirror-opts="editorOptions" ng-model="model.selectedRequest.response"></ui-codemirror>
+	</div>
+	<div class="mdl-card__menu">
+		<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" ng-click="closeThisDialog()">
+			<i class="material-icons">close</i>
+		</button>
+	</div>
+</div>

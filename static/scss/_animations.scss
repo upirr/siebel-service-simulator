@@ -1,0 +1,9 @@
+.mdl-card {
+	&.ng-enter {
+		transition:1s linear all;
+  		opacity:0;
+		&.ng-enter-active {
+			opacity: 1;
+		}
+	}
+}

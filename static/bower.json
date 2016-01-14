@@ -1,0 +1,42 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "authors": [
+    "regulus <oopyrj@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-animate": "~1.4.5",
+    "angular-cookies": "~1.4.5",
+    "angular-toasty": "~1.0.3",
+    "angular-ui-codemirror": "~0.3.0",
+    "angular-ui-router": "~0.2.14",
+    "animate.css": "~3.2.6",
+    "bourbon": "~4.2.2",
+    "codemirror": "~5.6.0",
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.1",
+    "material-design-lite": "~1.0.5",
+    "ng-dialog": "~0.5.5"
+  },
+  "overrides": {
+    "codemirror": {
+      "main": [
+        "lib/codemirror.js",
+        "lib/codemirror.css",
+        "mode/xml/xml.js",
+        "mode/htmlmixed/htmlmixed.js",
+        "theme/eclipse.css"
+      ]
+    }
+  }
+}

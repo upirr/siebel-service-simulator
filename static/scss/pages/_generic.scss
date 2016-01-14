@@ -1,0 +1,97 @@
+.jsrunner {
+	header {
+		color: #fff;
+		background: url('../../res/bg-ultra-wide.jpg') center / cover;
+		.mdl-layout__tab-bar {
+			background: none;
+		}
+		.mdl-layout__tab-bar-button {
+			background: none;
+		}
+		.mdl-layout-title {
+			font-weight: 700;
+		}
+		.contact {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			font-size: x-small;
+		}
+	}
+	.tbl-container {
+		padding: 1vmin;
+	}
+	.no-items-container {
+		height: 50vh;
+	}
+	.embossed {
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	}
+	.no-items {
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+		text-transform: uppercase;
+		font-size: x-large;
+	}
+	.margin {
+		margin: 1vmin;
+	}
+	.mdl-data-table .mdl-badge[data-badge]:after {
+		top: 11px;
+		right: -10px;
+	}
+	.mdl-data-table tr {
+		cursor: pointer;
+	}
+	a:hover {
+		cursor: pointer;
+	}
+	.mdl-control-container {
+		padding: 1vmin;
+	}
+	.opacity-50 {
+		opacity: .5;
+	}
+	.opacity-30 {
+		opacity: .3;
+	}
+}
+
+.mdl-control-container {
+	padding: 1vmin;
+}
+
+.mdl-textfield {
+	&.wider {
+		width: 30vw;
+	}
+	&.more-wider {
+		width: 50vw;
+	}
+	&.narrow {
+		width: 10vw;
+	}
+}
+
+.jsrunner-v2 {
+	background: url('../../res/alt-bg2.jpg') center / cover;
+	header {
+		color: white;
+		.mdl-layout-title {
+			font-size: x-large;
+			text-shadow: 0 3px 10px rgba(255, 255, 255, 0.8);
+		}
+		.mdl-navigation__link {
+			color: white;
+			font-size: medium;
+		}
+	}
+}
+
+.ngdialog-content {
+	padding: 0 !important;
+	width: 90vw !important;
+}
+
+.mdl-card.mdl-card--wide {
+	width: 90vw;
+}

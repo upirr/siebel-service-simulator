@@ -1,0 +1,86 @@
+<div class="max-width vbox x-center centered no-items-container" ng-if="!model.settings || !model.settings.length">
+	<span class="no-items">No settings found, create new <a ng-click="addItem()">entry</a></span>
+</div>
+
+<!-- add button -->
+<button type="button" id="add-request-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add" ng-click="addItem()">
+	<i class="material-icons" role="presentation">add</i>
+	<span class="visuallyhidden">Add</span>
+</button>
+
+<form action="#" class="max-width vbox centered" ng-if="model.settings.length" mdl-upgrade>
+	<!-- uri -->
+	<div class="hbox">
+		<div class="mdl-control-container">
+			<div class="mdl-textfield mdl-js-textfield wider">
+				<input class="mdl-textfield__input" type="text" id="uri" ng-model="model.selectedSettings.uri" />
+				<label class="mdl-textfield__label" for="uri" ng-show="!model.selectedSettings.uri">URI</label>
+			</div>
+		</div>
+		<div class="mdl-control-container">
+			<div class="mdl-textfield mdl-js-textfield narrow">
+				<input class="mdl-textfield__input" type="text" id="lang" ng-model="model.selectedSettings.language" />
+				<label class="mdl-textfield__label" for="lang" ng-show="!model.selectedSettings.language">Lang code</label>
+			</div>
+		</div>
+	</div>
+	<div class="hbox">
+		<div class="mdl-control-container">
+			<div class="mdl-textfield mdl-js-textfield">
+				<input class="mdl-textfield__input" type="text" id="username" ng-model="model.selectedSettings.username" />
+				<label class="mdl-textfield__label" for="username" ng-show="!model.selectedSettings.username">Username</label>
+			</div>
+		</div>
+		<div class="mdl-control-container">
+			<div class="mdl-textfield mdl-js-textfield">
+				<input class="mdl-textfield__input" type="text" id="password" ng-model="model.selectedSettings.password" />
+				<label class="mdl-textfield__label" for="password" ng-show="!model.selectedSettings.password">Password</label>
+			</div>
+		</div>
+	</div>
+	<div class="hbox mdl-control-container">
+		<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent margin" ng-click="saveItem(model.selectedSettings)" ng-disabled="!model.selectedSettings.changed">
+			SAVE
+		</button>
+		<button  type="button" class="mdl-button mdl-js-button mdl-button--primary margin" ng-click="rollbackItem(model.selectedSettings)" ng-disabled="!model.selectedSettings.changed">
+			CANCEL
+		</button>
+        
+        <button type="button" class="mdl-button mdl-js-button mdl-button--primary margin" ng-click="deleteItem(model.selectedSettings)" ng-disabled="!model.selectedSettings">
+			DELETE
+		</button>
+        
+        <button  type="button" class="mdl-button mdl-js-button mdl-button--primary margin" ng-click="testConnect(model.selectedSettings)" ng-disabled="!model.selectedSettings">
+			CONNECT
+		</button>
+	</div>
+</form>
+<div class="max-width" ng-if="model.settings.length" mdl-upgrade>
+	<div class="tbl-container">
+
+		<!-- table -->
+		<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp max-width">
+			<thead>
+				<tr>
+					<th class="mdl-data-table__cell--non-numeric">URI</th>
+					<th class="mdl-data-table__cell--non-numeric">Username</th>
+					<th class="mdl-data-table__cell--non-numeric">Password</th>
+					<th class="mdl-data-table__cell--non-numeric">Lang</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr ng-repeat="entry in model.settings" id="{{entry._guid}}" ng-class="{'is-selected': entry == model.selectedSettings}" ng-click="selectItem(entry)">
+					<td class="mdl-data-table__cell--non-numeric" ng-attr-data-badge="{{entry.changed == true ? '!' : ''}}" ng-class="{ 'mdl-badge' : entry.changed }">{{entry.uri}}
+						<div class="mdl-tooltip" mdl-upgrade for="{{entry._guid}}" ng-if="entry.changed">
+							Item not saved
+						</div>
+					</td>
+					<td class="mdl-data-table__cell--non-numeric">{{entry.username}}</td>
+					<td class="mdl-data-table__cell--non-numeric">{{entry.password}}</td>
+					<td class="mdl-data-table__cell--non-numeric">{{entry.language}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,23 @@
+<div class="mdl-card animated fadeIn mdl-shadow--2dp" ng-repeat="entry in requests">
+	<div class="mdl-card__title" style="background-color: {{getColor(entry)}}" ng-class="{'stripes' : entry == model.selectedSettings}">
+		<h2 class="mdl-card__title-text">{{entry.uri}}</h2>
+	</div>
+	<div class="mdl-card__supporting-text">
+		<ul>
+			<li>Username: {{entry.username}}</li>
+			<li>Password: {{entry.password}}</li>
+			<li>Language code: {{entry.lang}}</li>
+		</ul>
+	</div>
+	<div class="mdl-card__actions mdl-card--border">
+		<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ng-click="selectItem(entry)">Select</a>
+		<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ng-click="openItem(entry)">Open</a>
+		<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ng-click="copyItem(entry)">Duplicate</a>
+	</div>
+	<div class="mdl-card__menu">
+		<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="copy-button-{{entry._guid}}">
+			<i class="material-icons">delete</i>
+		</button>
+		<div class="mdl-tooltip" for="copy-button-{{entry._guid}}">Delete</div>
+	</div>
+</div>
