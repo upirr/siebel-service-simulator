@@ -34,6 +34,10 @@ Written using Spring Boot and AngularJS and uses Java Data Beans technology to c
 
 * First user have to setup connection URL to Siebel server. URL format is: **Siebel://&lt;host&gt;:&lt;port&gt;/&lt;enterprise_name&gt;/&lt;object_manager_alias&gt;**. An example: *Siebel://192.168.1.100:2321/SBA81/EAIObjMgr_enu* Default port number is 2321 and can be configured in SCBroker settings via setting the Static Port Number (alias PortNumber) option.
 
+* Following symbols will be converted on send: & - &amp;
+
+* DB location is: &lt;User Directory&gt;/jsrunner-db
+
 ###Customizing the code###
 
 In order to customize the prloject you have install Siebel jars into your local Maven repository first. 
