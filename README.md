@@ -8,8 +8,9 @@ Written using Spring Boot and AngularJS and uses Java Data Beans technology to c
 ####Prerequisites####
 * Java ver. 8
 * JDB drivers from your version of Siebel: **siebel.jar** and **siebelJI_enu.jar**. These can be found in siebsrvr/classes directory of your Siebel installation as well as in the same */classes* directory of Mobile Web client.
+
 ####Installation process####
-* Download [dist/siebel-service-simulator.zip](http://github.com/oopyrj/siebel-service-simulator/dist/siebel-service-simulator.zip) and unpack.
+* Download [dist/siebel-service-simulator.zip](https://github.com/oopyrj/siebel-service-simulator/blob/master/dist/siebel-service-simulator.rar) and unpack.
 * Place *siebel.jar* and *siebelJI_enu.jar* into jars directory.
 * Execute run.bat. _Note that it takes about 15 seconds for application to start itself.
 
@@ -35,7 +36,9 @@ Written using Spring Boot and AngularJS and uses Java Data Beans technology to c
 
 ###Customizing the code###
 
-In order to customize the project you have install Siebel jars into your local Maven repository first. 
+In order to customize the prloject you have install Siebel jars into your local Maven repository first. 
 This can be done by executing following commands:
+
 1. mvn install:install-file -D=file=SiebelJI_enu.jar -DgroupId=com.siebel -Dpackaging=jar -Dversion=1.0 -DartifactId=SiebelJI
+
 2. mvn install:install-file -D=file=Siebel.jar -DgroupId=com.siebel -Dpackaging=jar -Dversion=1.0 -DartifactId=Siebel
