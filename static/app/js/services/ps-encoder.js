@@ -72,7 +72,7 @@ app.service('psEncoder', function () {
 			//replace ampersant with &quot;
 			_.each(attrs, function (attr) {
 				processed += str.substr(pos, attr.index - pos);
-				processed += attr.value.replace(/\&(?!amp;)/gim, "&amp;");
+				processed += attr.value.replace(/\&(?!amp;|quot;)/gim, "&amp;");
 				pos = attr.index + attr.value.length;
 			});
 			

@@ -1,0 +1,22 @@
+[36m20 01 2016 14:45:55.514:DEBUG [plugin]: [39mLoading karma-* from c:\git\siebel-service-simulator\static\node_modules
+[36m20 01 2016 14:45:55.519:DEBUG [plugin]: [39mLoading plugin c:\git\siebel-service-simulator\static\node_modules/karma-brackets.
+[36m20 01 2016 14:45:55.626:DEBUG [plugin]: [39mLoading plugin c:\git\siebel-service-simulator\static\node_modules/karma-jasmine.
+[36m20 01 2016 14:45:55.630:DEBUG [plugin]: [39mLoading plugin c:\git\siebel-service-simulator\static\node_modules/karma-phantomjs-launcher.
+[36m20 01 2016 14:45:55.726:DEBUG [karma]: [39mList of files has changed, trying to execute
+[33m20 01 2016 14:45:55.726:WARN [karma]: [39mNo captured browser, open http://localhost:9876/
+[36m20 01 2016 14:45:55.731:DEBUG [watcher]: [39mWatching "c:/git/siebel-service-simulator/static/bower_components/angular/angular.min.js"
+[36m20 01 2016 14:45:55.731:DEBUG [watcher]: [39mWatching "c:/git/siebel-service-simulator/static/bower_components/jquery/dist/jquery.min.js"
+[36m20 01 2016 14:45:55.732:DEBUG [watcher]: [39mWatching "c:/git/siebel-service-simulator/static/bower_components/angular-mocks/angular-mocks.js"
+[36m20 01 2016 14:45:55.732:DEBUG [watcher]: [39mWatching "c:/git/siebel-service-simulator/static/app/js"
+[36m20 01 2016 14:45:55.732:DEBUG [watcher]: [39mWatching "c:/git/siebel-service-simulator/static/tests"
+[32m20 01 2016 14:45:55.736:INFO [karma]: [39mKarma v0.13.19 server started at http://localhost:9876/
+[33m20 01 2016 14:45:55.753:WARN [launcher]: [39mCan not load "Chrome", it is not registered!
+  Perhaps you are missing some plugin?
+[32m20 01 2016 14:45:55.754:INFO [launcher]: [39mStarting browser PhantomJS
+[36m20 01 2016 14:45:55.755:DEBUG [temp-dir]: [39mCreating temp dir at C:\Users\VALERI~1\AppData\Local\Temp\karma-50470280
+[36m20 01 2016 14:45:55.759:DEBUG [launcher]: [39mc:\git\siebel-service-simulator\static\node_modules\phantomjs\lib\phantom\phantomjs.exe C:\Users\VALERI~1\AppData\Local\Temp\karma-50470280/capture.js
+[36m20 01 2016 14:45:56.312:DEBUG [launcher]: [39mDisconnecting all browsers
+[36m20 01 2016 14:45:56.318:DEBUG [launcher]: [39mProcess PhantomJS exited with code 0
+[36m20 01 2016 14:45:56.318:DEBUG [temp-dir]: [39mCleaning temp dir C:\Users\VALERI~1\AppData\Local\Temp\karma-50470280
+[36m20 01 2016 14:45:56.323:DEBUG [launcher]: [39mFinished all browsers
+Terminate batch job (Y/N)? 

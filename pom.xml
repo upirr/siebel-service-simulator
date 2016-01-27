@@ -62,6 +62,8 @@
 				<targetPath>static</targetPath>
 				<excludes>
                     <exclude>node_modules/**</exclude>
+					<exclude>tests/**</exclude>
+					<exclude>karma.conf.js</exclude>
                 </excludes>
 			</resource>
 			<resource>
