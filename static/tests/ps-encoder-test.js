@@ -11,5 +11,5 @@ describe("ps-encoder test", function () {
 		expect(psEncoder).not.toBeUndefined();
 		expect(jasmine).not.toBeUndefined();
 		console.log(getJSONFixture('escape_quotes.json'))
-	})
+	});
 });

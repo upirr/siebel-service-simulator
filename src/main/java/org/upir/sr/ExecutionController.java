@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -96,7 +97,7 @@ public class ExecutionController {
 		return result;
 	}
 
-	@RequestMapping(method = RequestMethod.POST, value = "/service")
+	@RequestMapping(method = RequestMethod.POST, value = "/service", produces = MediaType.TEXT_PLAIN_VALUE)
 	public @ResponseBody String execute(@RequestBody ExecutionRequest request, HttpServletRequest httpRequest,
 			HttpServletResponse response) throws Exception {
 		
@@ -123,7 +124,7 @@ public class ExecutionController {
 			serviceInstance = connection.getService(request.getServiceName());
 			serviceInstance.invokeMethod(request.getMethodName(), ps, output);
 
-			return "{ \"response\" : \"" + output.encodeAsString() + "\"}";
+			return output.encodeAsString();
 
 		} catch (SiebelException e) {
 

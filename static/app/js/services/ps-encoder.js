@@ -14,10 +14,11 @@ app.service('psEncoder', function () {
 			write(target.attributes.length);
 			write(target.children.length);
 			writeString(target.nodeName);
-			var textValue = _.find(target.childNodes, function (node) {
-				return node.data;
-			});
-			writeValue(textValue && textValue.data);
+			
+			//find all parts of element containing text, merge it and send
+			writeValue(_.reduce(target.childNodes, function (result, node) {
+				return node.data && result + node.data || result;
+			}, ""));
 
 			for (var i = 0; i < target.attributes.length; i++) {
 				writeString(target.attributes[i].name);

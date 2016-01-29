@@ -51,15 +51,7 @@ app.service('requestExecutor', function ($log, $http, model, $q, psEncoder, psDe
 			})
 			.then(function (response) {
 				$log.debug("request-executor: execution successful");
-				if (response.data && response.data.response)
-					deferred.resolve(psDecoder.decode(response.data.response));
-				else
-					deferred.reject({
-						data: {
-							exception: "empty.response",
-							response: response
-						}
-					});
+				deferred.resolve(psDecoder.decode(response.data));
 			}, function (response) {
 				$log.warn("request-executor: execution failed", response);
 				deferred.reject(response);
