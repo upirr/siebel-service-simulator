@@ -37,6 +37,7 @@
         "lib/codemirror.css",
         "mode/xml/xml.js",
         "mode/htmlmixed/htmlmixed.js",
+        "mode/sql/sql.js",
         "theme/eclipse.css"
       ]
     }

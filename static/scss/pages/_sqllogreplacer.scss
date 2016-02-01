@@ -1,0 +1,11 @@
+.jsrunner {
+	.sql-log-replacer {
+		padding: 1vmin;
+		
+		.CodeMirror {
+			align-self: stretch;
+			height: 88vh;
+			border: 1px solid rgba(0, 0, 0, .2);
+		}
+	}
+}

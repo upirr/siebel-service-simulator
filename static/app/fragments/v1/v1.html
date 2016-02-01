@@ -13,6 +13,7 @@
 			<a href="#scroll-tab-1" class="mdl-layout__tab is-active">Requests</a>
 			<a href="#scroll-tab-2" class="mdl-layout__tab">Connection profiles</a>
 			<a href="#scroll-tab-3" class="mdl-layout__tab">Connections</a>
+			<a href="#scroll-tab-4" class="mdl-layout__tab">SQL Log replacer</a>
 		</div>
 	</header>
 	<!--
@@ -37,6 +38,13 @@
 		<section class="mdl-layout__tab-panel" id="scroll-tab-3">
 			<div class="page-content">
 				<div ng-include="'/app/fragments/v1/connections.html'" ng-controller="ConnCtrl"></div>
+			</div>
+		</section>
+		
+		<!-- sql log replacer -->
+		<section class="mdl-layout__tab-panel" id="scroll-tab-4">
+			<div class="page-content">
+				<div ng-include="'/app/fragments/v1/sql-replacer.html'" ng-controller="SQLLogReplCtrl"></div>
 			</div>
 		</section>
 	</main>

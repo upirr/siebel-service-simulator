@@ -1,0 +1,389 @@
+/* line 2, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner header {
+  color: #fff;
+  background: url("../../res/bg-ultra-wide.jpg") center/cover; }
+  /* line 5, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+  .jsrunner header .mdl-layout__tab-bar {
+    background: none; }
+  /* line 8, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+  .jsrunner header .mdl-layout__tab-bar-button {
+    background: none; }
+  /* line 11, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+  .jsrunner header .mdl-layout-title {
+    font-weight: 700; }
+  /* line 14, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+  .jsrunner header .contact {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: x-small; }
+
+/* line 21, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner .tbl-container {
+  padding: 1vmin; }
+
+/* line 24, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner .no-items-container {
+  height: 50vh; }
+
+/* line 27, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner .embossed {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+
+/* line 30, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner .no-items {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  font-size: x-large; }
+
+/* line 35, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner .margin {
+  margin: 1vmin; }
+
+/* line 38, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner .mdl-data-table .mdl-badge[data-badge]:after {
+  top: 11px;
+  right: -10px; }
+
+/* line 42, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner .mdl-data-table tr {
+  cursor: pointer; }
+
+/* line 45, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner a:hover {
+  cursor: pointer; }
+
+/* line 48, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner .mdl-control-container {
+  padding: 1vmin; }
+
+/* line 51, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner .opacity-50 {
+  opacity: .5; }
+
+/* line 54, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner .opacity-30 {
+  opacity: .3; }
+
+/* line 59, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.mdl-control-container {
+  padding: 1vmin; }
+
+/* line 64, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.mdl-textfield.wider {
+  width: 30vw; }
+
+/* line 67, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.mdl-textfield.more-wider {
+  width: 50vw; }
+
+/* line 70, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.mdl-textfield.narrow {
+  width: 10vw; }
+
+/* line 75, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.jsrunner-v2 {
+  background: url("../../res/alt-bg2.jpg") center/cover; }
+  /* line 77, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+  .jsrunner-v2 header {
+    color: white; }
+    /* line 79, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+    .jsrunner-v2 header .mdl-layout-title {
+      font-size: x-large;
+      text-shadow: 0 3px 10px rgba(255, 255, 255, 0.8); }
+    /* line 83, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+    .jsrunner-v2 header .mdl-navigation__link {
+      color: white;
+      font-size: medium; }
+
+/* line 90, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.ngdialog-content {
+  padding: 0 !important;
+  width: 90vw !important; }
+
+/* line 95, C:/git/siebel-service-simulator/static/scss/pages/_generic.scss */
+.mdl-card.mdl-card--wide {
+  width: 90vw; }
+
+/* line 2, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+.jsrunner .bottom-right-button {
+  position: fixed;
+  display: block;
+  right: 0;
+  bottom: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  z-index: 900; }
+
+/* line 11, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+.jsrunner .requests-table {
+  max-height: 50vh; }
+
+/* line 14, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+.jsrunner .xml-container {
+  min-height: 70vh; }
+  /* line 16, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+  .jsrunner .xml-container .CodeMirror {
+    width: 50vw;
+    align-self: stretch;
+    height: 100vh;
+    border: 1px solid rgba(0, 0, 0, 0.2); }
+
+/* line 23, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+.jsrunner .search-input {
+  width: 60vw !important;
+  align-self: center; }
+
+/* line 29, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+.jsrunner-v2 .main {
+  padding: 2vmin; }
+  /* line 32, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+  .jsrunner-v2 .main #add {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900; }
+  /* line 42, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+  .jsrunner-v2 .main .cards {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    flex-flow: row wrap; }
+  /* line 48, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+  .jsrunner-v2 .main .mdl-card {
+    width: 20vw;
+    margin: 2vmin; }
+    /* line 52, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+    .jsrunner-v2 .main .mdl-card .mdl-card__title {
+      height: 10vh; }
+      /* line 54, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+      .jsrunner-v2 .main .mdl-card .mdl-card__title .mdl-card__title-text {
+        font-size: small; }
+    /* line 58, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+    .jsrunner-v2 .main .mdl-card .mdl-card__menu {
+      right: 0;
+      top: 0; }
+      /* line 62, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+      .jsrunner-v2 .main .mdl-card .mdl-card__menu .material-icons {
+        font-size: small; }
+    /* line 66, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+    .jsrunner-v2 .main .mdl-card .mdl-card__supporting-text {
+      font-size: small;
+      padding: 10px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap; }
+      /* line 72, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+      .jsrunner-v2 .main .mdl-card .mdl-card__supporting-text ul {
+        padding: 0;
+        font-size: x-small;
+        line-height: 16px;
+        list-style-type: none; }
+    /* line 80, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+    .jsrunner-v2 .main .mdl-card .mdl-card__actions .mdl-button {
+      font-size: x-small; }
+    /* line 84, C:/git/siebel-service-simulator/static/scss/pages/_main.scss */
+    .jsrunner-v2 .main .mdl-card .mdl-tooltip {
+      font-size: xx-small; }
+
+/* line 2, C:/git/siebel-service-simulator/static/scss/pages/_connections.scss */
+.jsrunner .card-connections {
+  width: 715px !important; }
+  /* line 4, C:/git/siebel-service-simulator/static/scss/pages/_connections.scss */
+  .jsrunner .card-connections .mdl-card__title {
+    color: #fff;
+    height: 215px;
+    background: url("../../res/connections.PNG") center/cover; }
+
+/* line 1, C:/git/siebel-service-simulator/static/scss/pages/_settings.scss */
+.jsrunner-v2 .settings {
+  padding: 2vmin; }
+  /* line 3, C:/git/siebel-service-simulator/static/scss/pages/_settings.scss */
+  .jsrunner-v2 .settings .cards {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-flex-flow: column nowrap;
+    -moz-flex-flow: column nowrap;
+    flex-flow: column nowrap; }
+
+/* line 1, C:/git/siebel-service-simulator/static/scss/v2/ngdialog.scss */
+.ngdialog {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important; }
+  /* line 4, C:/git/siebel-service-simulator/static/scss/v2/ngdialog.scss */
+  .ngdialog .CodeMirror {
+    height: 70vh; }
+
+/* line 2, C:/git/siebel-service-simulator/static/scss/_animations.scss */
+.mdl-card.ng-enter {
+  transition: 1s linear all;
+  opacity: 0; }
+  /* line 5, C:/git/siebel-service-simulator/static/scss/_animations.scss */
+  .mdl-card.ng-enter.ng-enter-active {
+    opacity: 1; }
+
+/* line 1, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.hbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  flex-flow: row nowrap; }
+
+/* line 6, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.vbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  flex-flow: column nowrap; }
+
+/* line 11, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.flex-start {
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: start; }
+
+/* line 15, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.flex-end {
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: end; }
+
+/* line 19, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.center, .centered {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
+/* line 23, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.space-between {
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+
+/* line 27, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.x-center {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center; }
+
+/* line 31, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.x-stretch {
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch; }
+
+/* line 35, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.x-flex-end {
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+  -ms-flex-align: end; }
+
+/* line 39, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.align-self-flex-end {
+  -webkit-align-self: flex-end;
+  -moz-align-self: flex-end;
+  align-self: flex-end;
+  -ms-flex-item-align: end; }
+
+/* line 43, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.align-self-stretch {
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  align-self: stretch;
+  -ms-flex-item-align: stretch; }
+
+/* line 47, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.flex {
+  flex-grow: 1; }
+
+/* line 51, C:/git/siebel-service-simulator/static/scss/_flex.scss */
+.max-width {
+  width: 100% !important; }
+
+/*# sourceMappingURL=app.css.map */
